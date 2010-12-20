@@ -1,4 +1,4 @@
-<cfcomponent displayname="Thread" extends="farcry.core.packages.types.types" fualias="thread">
+<cfcomponent displayname="Thread" extends="farcry.core.packages.types.types" fualias="thread" bFriendly="true">
 
 <cfproperty 
 	name="forumID" type="uuid" hint="Parent forum." required="true" default="" 

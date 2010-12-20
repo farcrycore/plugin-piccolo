@@ -8,7 +8,7 @@
 
 <ft:objectAdmin
 	title="Piccolo Forums"
-	typename="forum"
+	typename="pForum"
 	ColumnList="title,description,datetimelastupdated"
 	SortableColumns=""
 	lFilterFields=""

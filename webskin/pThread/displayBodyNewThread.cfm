@@ -7,13 +7,13 @@
 
 <!--- save new thread --->
 <ft:processform action="Save">
-	<ft:processformobjects typename="thread">
+	<ft:processformobjects typename="pThread">
 		<cfset bViewThread = true>
 	</ft:processformobjects>
 </ft:processform>
 
 <cfif bViewThread>
-	<cflocation addtoken="false" url="#application.fapi.getLink(type="thread", objectid="#stProperties.objectid#")#">
+	<cflocation addtoken="false" url="#application.fapi.getLink(type="pThread", objectid="#stProperties.objectid#")#">
 </cfif>
 
 
@@ -21,7 +21,7 @@
 <h1>New Thread</h1>
 
 <ft:form>
-<ft:object lFields="title,body" typename="thread" />
+<ft:object lFields="title,body" typename="pThread" />
 <input type="hidden" name="forumID" value="#url.forumID#">
 <ft:buttonpanel>
 	<ft:button value="Save" />

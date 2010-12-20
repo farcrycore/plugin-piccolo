@@ -8,7 +8,7 @@
 
 <ft:objectAdmin
 	title="Piccolo Threads"
-	typename="thread"
+	typename="pThread"
 	ColumnList="title,createdby,datetimecreated"
 	SortableColumns=""
 	lFilterFields=""

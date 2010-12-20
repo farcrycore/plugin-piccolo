@@ -1,4 +1,4 @@
-<cfcomponent displayname="Forum" extends="farcry.core.packages.types.types" fualias="forum">
+<cfcomponent displayname="Forum" extends="farcry.core.packages.types.types" fualias="forum" bFriendly="true">
 
 <cfproperty 
 	name="title" type="string" hint="Forum title." required="true" default="" 
