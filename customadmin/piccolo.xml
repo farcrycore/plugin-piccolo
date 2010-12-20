@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webtop>
+	<section mergeType="merge" id="forumContent" label="Piccolo Forums">
+		<subsection mergeType="merge" id="forumSection" label="Piccolo Forums">
+			<menu mergeType="merge" id="forumSubSection" label="Piccolo Forums" labelType="value">
+				<menuitem sequence="1" mergeType="merge" id="forumlist" label="Forums" link="/admin/customadmin.cfm?module=customlists/forum.cfm&amp;plugin=piccolo" />
+				<menuitem sequence="2" mergeType="merge" id="threadlist" label="Threads" link="/admin/customadmin.cfm?module=customlists/thread.cfm&amp;plugin=piccolo" />
+			</menu>
+		</subsection>
+	</section>
+</webtop>
+
