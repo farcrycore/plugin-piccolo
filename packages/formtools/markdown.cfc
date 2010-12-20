@@ -47,8 +47,15 @@
 					});
 				</script>
 				
-				<div class="clear" style="text-align: left;">
-					<textarea name="#arguments.fieldname#" id="#arguments.fieldname#" class="markItUp textareaInput #arguments.stMetadata.ftClass#" style="width: 100%; #arguments.stMetadata.ftStyle#" cols="80" rows="20">#arguments.stMetadata.value#</textarea>
+				<style type="text/css">
+					.uniForm .markItUp {
+						float: left;
+						width: 55%;
+					}
+				</style>
+
+				<div style="text-align: left;">
+					<textarea name="#arguments.fieldname#" id="#arguments.fieldname#" class="markItUp #arguments.stMetadata.ftClass#" style="width: 100%; #arguments.stMetadata.ftStyle#" cols="80" rows="20">#arguments.stMetadata.value#</textarea>
 					<div class="clear"></div>
 				</div>
 			</cfoutput>
