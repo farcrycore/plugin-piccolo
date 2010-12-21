@@ -9,10 +9,10 @@
 <ft:objectAdmin
 	title="Piccolo Forums"
 	typename="pForum"
-	ColumnList="title,description,datetimelastupdated"
+	ColumnList="seq,title,description,datetimelastupdated"
 	SortableColumns=""
 	lFilterFields=""
-	sqlorderby="" />
+	sqlorderby="seq ASC" />
 
 <admin:footer />
 

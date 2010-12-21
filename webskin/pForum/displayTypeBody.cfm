@@ -1,6 +1,6 @@
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin" />
 
-<cfset qForums = application.fapi.getContentObjects(typename="pForum")>
+<cfset qForums = application.fapi.getContentObjects(typename="pForum",orderby="seq ASC")>
 
 <cfoutput>
 <h1>Forums</h1>

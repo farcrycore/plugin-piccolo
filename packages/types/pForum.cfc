@@ -13,6 +13,12 @@
 	fttype="longchar" ftlimit="250"
 	fthint="" />
 
+<cfproperty 
+	name="seq" type="string" hint="Forum sequence position." required="true" default="" 
+	ftSeq="3" ftFieldset="General Details" ftLabel="Position"
+	fthint=""
+	fttype="list" ftListData="getSequence" />
+
 
 <!--- 
  // type methods 
@@ -44,6 +50,26 @@
 	</cfquery>
 
 	<cfreturn qPost.d>
+</cffunction>
+
+<!--- 
+ // formtool library methods 
+--------------------------------------------------------------------------------------------------->
+<cffunction name="getSequence">
+	<cfset var q = "">
+	<cfset var i = 0>
+	<cfset var seqList = "">
+	
+	<cfquery name="q" datasource="#application.dsn#">
+		SELECT count(*) AS totalForums
+		FROM #application.dbowner#pForum
+	</cfquery>
+	
+	<cfloop from="1" to="#q.totalForums#" index="i">
+		<cfset seqList = listAppend(seqList, i)>
+	</cfloop>
+
+	<cfreturn seqList />
 </cffunction>
 
 </cfcomponent>
