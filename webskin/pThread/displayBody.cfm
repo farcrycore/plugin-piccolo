@@ -3,6 +3,7 @@
 <cfset stParamNewPost = { "threadID"=stobj.objectid, "postID"=qPosts.objectid }>
 
 
+<skin:view typename="pForum" objectid="#stobj.forumid#" webskin="displayLabel" />
 <cfoutput>
 <h1>#stobj.title# - <a href="#application.fapi.getLink(type="pPost", bodyview="displayBodyNewReply", stParameters=stParamNewPost)#">New Reply</a></h1>
 
