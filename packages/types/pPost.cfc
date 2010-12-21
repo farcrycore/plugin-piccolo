@@ -10,22 +10,28 @@
 	ftSeq="2" ftFieldset="General Details" ftLabel="Body"
 	ftType="markdown" />
 
-<!--- 
 
 <cffunction name="afterSave">
+	<cfargument name="stProperties" required="yes" type="struct" hint="A structure containing the contents of the properties that were saved to the object.">
 
-<cfscript>
-	qChildren = application.factory.oTree.getChildren(objectid=arguments.parentID,typename='dmCategory');
-	position = qChildren.recordCount + 1;
-	stReturn = application.factory.oTree.setChild(objectName=arguments.categoryLabel,typename='dmCategory',parentID=arguments.parentID,objectID=arguments.categoryID,pos=position);
+	<cfset var parentPost = "">
+	<cfset var qRootNode = "">
+	<cfset var qChildren = "">
+	<cfset var position = "">
+	<cfset var stReturn = "">
 
-	stStatus.message = '#arguments.categoryLabel# successfully added';
-	stStatus.status = true;
-</cfscript>
+	<cfif structKeyExists(arguments.stProperties, "postID") AND arguments.stProperties.postID neq "">
+		<cfset parentPost = arguments.stProperties.postID>
+	<cfelse>
+		<cfset qRootNode = application.factory.oTree.getRootNode(typename="pPost")>
+		<cfset parentPost = qRootNode.objectid>
+	</cfif>
 
+	<cfset qChildren = application.factory.oTree.getChildren(objectid=parentPost,typename='pPost')>
+	<cfset position = qChildren.recordCount + 1>
+	<cfset stReturn = application.factory.oTree.setChild(objectName=left(arguments.stProperties.body,24),typename='pPost',parentID=parentPost,objectID=arguments.stProperties.objectid,pos=position)>
 
 </cffunction>
- --->
 
 
 </cfcomponent>
