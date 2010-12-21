@@ -5,6 +5,7 @@
 			<menu mergeType="merge" id="forumSubSection" label="Piccolo Forums" labelType="value">
 				<menuitem sequence="1" mergeType="merge" id="forumlist" label="Forums" link="/admin/customadmin.cfm?module=customlists/forum.cfm&amp;plugin=piccolo" />
 				<menuitem sequence="2" mergeType="merge" id="threadlist" label="Threads" link="/admin/customadmin.cfm?module=customlists/thread.cfm&amp;plugin=piccolo" />
+				<menuitem sequence="3" mergeType="merge" id="postlist" label="Posts" link="/admin/customadmin.cfm?module=customlists/post.cfm&amp;plugin=piccolo" />
 			</menu>
 		</subsection>
 	</section>
