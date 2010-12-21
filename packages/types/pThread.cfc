@@ -1,5 +1,8 @@
 <cfcomponent displayname="Thread" extends="farcry.core.packages.types.types" fualias="thread" bFriendly="true">
 
+<!--- 
+ // type properties 
+--------------------------------------------------------------------------------------------------->
 <cfproperty 
 	name="forumID" type="uuid" hint="Parent forum." required="true" default="" 
 	ftSeq="1" ftFieldset="General Details" ftLabel="Parent Forum"
@@ -10,7 +13,14 @@
 	ftSeq="2" ftFieldset="General Details" ftLabel="Title" ftValidation="required"
 	ftHint="" />
 
+<cfproperty 
+	name="sticky" type="boolean" hint="Flag for sticky threads." required="true" default="0" 
+	ftSeq="3" ftFieldset="General Details" ftLabel="Sticky"
+	ftHint="" />
 
+<!--- 
+ // type methods
+--------------------------------------------------------------------------------------------------->
 <cffunction name="getPostCount">
 	<cfargument name="threadID" required="true">
 	

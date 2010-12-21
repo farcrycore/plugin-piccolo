@@ -1,6 +1,8 @@
+<!--- @@displayname: Basic Forum Thread List --->
+
 <cfimport taglib="/farcry/core/tags/webskin" prefix="skin" />
 
-<cfset qThreads = application.fapi.getContentObjects(typename="pThread", forumID_eq="#stobj.objectid#", orderBy="datetimecreated DESC")>
+<cfset qThreads = application.fapi.getContentObjects(typename="pThread", forumID_eq="#stobj.objectid#", orderBy="sticky DESC, datetimelastupdated DESC")>
 <cfset stParamNewThread = {	"forumID" = stobj.objectid }>
 
 <cfoutput>
@@ -9,6 +11,9 @@
 <cfif qThreads.recordcount gt 0>
 	<table class="pTable" cellpadding="0" cellspacing="0">
 	<tr>
+		<th class="pThreadIcon">
+			&nbsp;
+		</th>
 		<th class="pThreadTitle">
 			<strong>Title</strong>
 		</th>

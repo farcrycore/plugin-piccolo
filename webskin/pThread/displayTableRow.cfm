@@ -11,6 +11,11 @@
 
 <cfoutput>
 <tr class="pThreadRow">
+	<td class="pThreadIcon">
+		<cfif stobj.sticky>
+			[sticky]
+		</cfif>
+	</td>
 	<td class="pThreadTitle">
 		<skin:buildLink objectID="#stObj.ObjectID#"><cfoutput>#stobj.title#</cfoutput></skin:buildLink>
 	</td>

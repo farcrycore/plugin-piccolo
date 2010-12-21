@@ -9,10 +9,10 @@
 <ft:objectAdmin
 	title="Piccolo Threads"
 	typename="pThread"
-	ColumnList="title,createdby,datetimecreated"
-	SortableColumns=""
-	lFilterFields=""
-	sqlorderby="" />
+	ColumnList="sticky,title,createdby,datetimecreated,datetimelastupdated"
+	SortableColumns="datetimecreated,datetimelastupdated"
+	lFilterFields="title"
+	sqlorderby="datetimecreated" />
 
 <admin:footer />
 
