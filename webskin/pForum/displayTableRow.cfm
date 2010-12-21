@@ -16,6 +16,9 @@
 	<td class="pForumThreads">
 		#pForum.getThreadCount(forumID=stobj.objectid)#
 	</td>
+	<td class="pForumLastPost">
+		#application.fapi.prettydate(pForum.getLastPosted(forumID=stobj.objectid))#
+	</td>
 </tr>
 </cfoutput>
 

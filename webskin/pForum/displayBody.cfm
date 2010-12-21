@@ -20,7 +20,7 @@
 		</th>
 	</tr>
 	<cfloop query="qThreads">
-		<skin:view objectid="#qThreads.objectid#" typename="pThread" template="displayTeaserStandard" />
+		<skin:view objectid="#qThreads.objectid#" typename="pThread" template="displayTableRow" />
 	</cfloop>
 	</table>
 <cfelse>

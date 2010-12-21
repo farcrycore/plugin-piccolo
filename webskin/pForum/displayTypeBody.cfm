@@ -9,14 +9,17 @@
 	<table class="pTable" cellpadding="0" cellspacing="0">
 	<tr>
 		<th class="pForumTitle">
-			<strong>Forum Title</strong>
+			<strong>Forums</strong>
 		</th>
 		<th class="pForumThreads">
-			<strong>Topics</strong>
+			<strong>Threads</strong>
+		</th>
+		<th class="pForumLastPost">
+			<strong>Last Posted</strong>
 		</th>
 	</tr>
 	<cfloop query="qForums">
-		<skin:view objectid="#qForums.objectid#" typename="pForum" template="displayTeaserStandard" />
+		<skin:view objectid="#qForums.objectid#" typename="pForum" template="displayTableRow" />
 	</cfloop>
 	</table>
 <cfelse>

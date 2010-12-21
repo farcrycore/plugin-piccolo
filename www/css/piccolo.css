@@ -24,6 +24,11 @@
 	text-align: right;
 }
 
+.pTable .pForumLastPost {
+	width: 10em;
+	text-align: right;
+}
+
 .pTable .pThreadTitle {
 	vertical-align: top;
 }

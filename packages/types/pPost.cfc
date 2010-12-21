@@ -19,7 +19,8 @@
 	<cfset var qChildren = "">
 	<cfset var position = "">
 	<cfset var stReturn = "">
-
+		
+	<!--- update nested tree graph for post threading --->
 	<cfif structKeyExists(arguments.stProperties, "postID") AND arguments.stProperties.postID neq "">
 		<cfset parentPost = arguments.stProperties.postID>
 	<cfelse>
