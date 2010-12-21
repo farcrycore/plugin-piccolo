@@ -11,4 +11,20 @@
 	fttype="longchar" ftlimit="250"
 	fthint="" />
 
+
+<cffunction name="getThreadCount">
+	<cfargument name="forumID" required="true">
+	
+	<cfset var qCount = "">
+	
+	<cfquery name="qCount" datasource="#application.dsn#">
+		SELECT COUNT(objectID) AS c
+		FROM #application.dbowner#pThread
+		WHERE forumID = <cfqueryparam cfsqltype="cf_sql_varchar" value="#arguments.forumID#">
+	</cfquery>
+
+	<cfreturn qCount.c>
+</cffunction>
+
+
 </cfcomponent>

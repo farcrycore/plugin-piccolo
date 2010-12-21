@@ -1,0 +1,37 @@
+
+.pTable {
+	width: 100%;
+}
+.pTable p {
+	margin: 0;
+	padding: 0;
+}
+.pTable tr {
+	border-bottom: 1px solid #f0f0f0;
+}
+.pTable th {
+	padding: 4px;
+	background: #fafafa;
+	border-bottom: #f0f0f0;
+}
+.pTable td {
+	padding: 4px;
+}
+.pTable .pForumTitle {
+}
+.pTable .pForumThreads {
+	width: 5em;
+	text-align: right;
+}
+
+.pTable .pThreadTitle {
+	vertical-align: top;
+}
+.pTable .pThreadPosts {
+	width: 5em;
+	text-align: right;
+}
+.pTable .pThreadLastPost {
+	width: 10em;
+	text-align: right;
+}
