@@ -10,9 +10,4 @@
 	ftSeq="2" ftFieldset="General Details" ftLabel="Title" ftValidation="required"
 	ftHint="" />
 	
-<cfproperty 
-	name="body" type="longchar" hint="Teaser" required="false" default="" 
-	ftSeq="3" ftFieldset="General Details" ftLabel="Body (DELETE ME)"
-	ftType="markdown" />
-
 </cfcomponent>
