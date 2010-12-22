@@ -1,9 +1,25 @@
+/**
+ *  temporary fixes
+ */
+
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 0;
 }
 td {
 	line-height: 1.5;
 }
+
+.markItUpFooter {
+	clear: both;
+}
+.markItUp a {
+    background-position: 50% 50%;
+}
+
+
+/**
+ *  default piccolo styles
+ */
 
 .pTable, .pPostTable {
 	width: 100%;
