@@ -12,7 +12,7 @@
 	ColumnList="createdby,datetimecreated"
 	SortableColumns=""
 	lFilterFields=""
-	sqlorderby="" />
+	sqlorderby="datetimecreated DESC" />
 
 <admin:footer />
 
