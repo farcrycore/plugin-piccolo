@@ -13,6 +13,6 @@
 <!--- 
  // view
 --------------------------------------------------------------------------------------------------->
-<cfoutput>#stobj.label#</cfoutput>
+<cfoutput><span class="profileLabel">#stobj.label#</span></cfoutput>
 
 <cfsetting enablecfoutputonly="false" />

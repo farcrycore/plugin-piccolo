@@ -1,8 +1,17 @@
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+}
+td {
+	line-height: 1.5;
+}
 
-.pTable {
+.pTable, .pPostTable {
 	width: 100%;
 }
-.pTable p {
+.pTable {
+	margin: 10px 0;
+}
+.pTable p, .pPostTable p {
 	margin: 0;
 	padding: 0;
 }
@@ -12,7 +21,6 @@
 .pTable th {
 	padding: 4px;
 	background: #fafafa;
-	border-bottom: #f0f0f0;
 }
 .pTable td {
 	padding: 4px;
@@ -30,7 +38,7 @@
 }
 
 .pTable .pThreadTitle {
-	vertical-align: top;
+
 }
 .pTable .pThreadPosts {
 	width: 5em;
@@ -39,4 +47,18 @@
 .pTable .pThreadLastPost {
 	width: 10em;
 	text-align: right;
+	padding-left: 8px;
+}
+
+.pThread {
+	margin: 10px 0;
+}
+.pPostRow {
+	padding: 10px 0;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.pPostRow .profileLabel {
+	display: block;
+	font-weight: bold;
 }

@@ -6,7 +6,7 @@
 <cfimport taglib="/farcry/core/tags/formtools/" prefix="ft" />
 
 <cfset oProfile = application.fapi.getContentType(typename="dmProfile")>
-<cfset pThread = application.fapi.getContentType(typename="pThread")>
+<cfset oThread = application.fapi.getContentType(typename="pThread")>
 <cfset stLastPost = application.fapi.getContentObjects(typename="pPost", lProperties="datetimecreated,createdby", threadID_eq="#stobj.objectid#", orderBy="datetimecreated DESC", maxRows="1")>
 
 <cfoutput>
@@ -20,10 +20,10 @@
 		<skin:buildLink objectID="#stObj.ObjectID#"><cfoutput>#stobj.title#</cfoutput></skin:buildLink>
 	</td>
 	<td class="pThreadPosts">
-		#pThread.getPostCount(threadID=stobj.objectid)#
+		#oThread.getPostCount(threadID=stobj.objectid)#
 	</td>
 	<td class="pThreadLastPost">
-		#application.fapi.prettyDate(stLastPost.datetimecreated)#<br>
+		#application.fapi.prettyDate(stLastPost.datetimecreated)#<br />
 		by <skin:view typename="dmProfile" objectid="#oProfile.getProfileID(stLastPost.createdby)#" webskin="displayProfileLabel" /> 
 	</td>
 </tr>

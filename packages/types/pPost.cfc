@@ -19,6 +19,8 @@
 	<cfset var qChildren = "">
 	<cfset var position = "">
 	<cfset var stReturn = "">
+	<cfset var oThread = "">
+	<cfset var stThread = StructNew()>
 		
 	<!--- update nested tree graph for post threading --->
 	<cfif structKeyExists(arguments.stProperties, "postID") AND arguments.stProperties.postID neq "">
@@ -31,6 +33,12 @@
 	<cfset qChildren = application.factory.oTree.getChildren(objectid=parentPost,typename='pPost')>
 	<cfset position = qChildren.recordCount + 1>
 	<cfset stReturn = application.factory.oTree.setChild(objectName=left(arguments.stProperties.body,24),typename='pPost',parentID=parentPost,objectID=arguments.stProperties.objectid,pos=position)>
+
+	<!--- update the parent thread's last post info --->
+	<cfset oThread = application.fapi.getContentType(typename="pThread")>
+	<cfset stThread.objectid = stProperties.threadID>
+	<cfset stThread.datetimelastpost = stProperties.datetimecreated>
+	<cfset oThread.setData(stProperties=stThread)>
 
 </cffunction>
 

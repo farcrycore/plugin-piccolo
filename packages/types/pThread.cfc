@@ -18,6 +18,11 @@
 	ftSeq="3" ftFieldset="General Details" ftLabel="Sticky"
 	ftHint="" />
 
+<cfproperty 
+	name="datetimelastpost" type="date" hint="Timestamp for last post creation." required="true" 
+	ftDefault="now()" ftDefaultType="evaluate"> 
+
+
 <!--- 
  // type methods
 --------------------------------------------------------------------------------------------------->
